@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://fiddle.jshell.net/nathansnider/q8ar6wu9/show/light/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Leaflet.Photo example</title>
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script type="text/javascript" src="./jquery-1.9.1.js.download"></script>
+    <script type="text/javascript" src="./jquery-ui.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./jquery-ui.css">
+
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+
+      <script type="text/javascript" src="./leaflet.js.download"></script>
+      <link rel="stylesheet" type="text/css" href="./leaflet.css">
+      <script type="text/javascript" src="./spin.min.js.download"></script>
+      <script type="text/javascript" src="./leaflet.spin.js.download"></script>
+      <script type="text/javascript" src="./leaflet.markercluster.js.download"></script>
+      <link rel="stylesheet" type="text/css" href="./MarkerCluster.css">
+      <script type="text/javascript" src="./Leaflet.Photo.js.download"></script>
+      <link rel="stylesheet" type="text/css" href="./Leaflet.Photo.css">
+
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+
+
+
+  <style id="compiled-css" type="text/css">
+      html,
+body,
+#map {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+.infopop h4 {
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0 0 0px;
+  color: #777;
+}
+
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-light navbar-expand-md fixed-top bg-white navigation-clean-button" style="padding: 2px;">
+        <div class="container"><img class="img-fluid" src="logonievo.png" style="width: 68px;margin-right: 10px;"><a class="navbar-brand" href="#" style="font-family: Convergence, sans-serif;">Ecoagraria<p style="font-size: 10px;font-family: Convergence, sans-serif;text-align: left;margin: 0px;">Alimentos naturales</p><p style="font-size: 10px;margin: 0px;">para una familia feliz</p></a>
+            <button
+                data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse d-xl-flex justify-content-xl-end" id="navcol-1">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item"></li>
+                        <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="font-family: Convergence, sans-serif;font-weight: bold;">Huancané</a>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+                        </li>
+                        <li class="nav-item d-xl-flex justify-content-xl-end"></li>
+                    </ul><span class="navbar-text actions"> <a class="login" href="#" style="font-size: 15px;font-family: Convergence, sans-serif;font-weight: bold;background: #e3e1e1;border-style: none;padding: 14px;border-radius: 10px;margin: 5PX;">Productos</a><a class="login" href="#" style="font-size: 15px;font-family: Convergence, sans-serif;font-weight: bold;background: #e3e1e1;border-style: none;padding: 14px;border-radius: 10px;margin: 5PX;">Productos</a><a class="login" href="#" style="font-size: 15px;font-family: Convergence, sans-serif;font-weight: bold;background: #7bb736;border-style: none;padding: 14px;border-radius: 10px;color: rgb(255,255,255);">Productos</a></span></div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+    <nav class="navbar navbar-dark navbar-expand-md fixed-bottom text-center" id="app-navbar" style="width: 31%;margin: -3px;margin-left: 38%;background: #e7e7e7;border-radius: 0;border-bottom-right-radius: 1px;border-top-left-radius: 21px;border-top-right-radius: 20px;padding: 7px;padding-right: 2px;text-align: center;height: 84px;">
+        <div class="container">
+            <p class="text-center" style="text-align: center;height: 1px;width: 100px;margin-bottom: 22px;">Escribenos&nbsp;</p><a href="#" style="font-size: 12px;border-style: none;margin-left: 18px;"><img class="img-fluid" src="wa.png" style="font-size: 4px;width: 45px;border-style: none;"></a></div>
+    </nav>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+
+  
+    <div id="map" class="leaflet-container leaflet-fade-anim" tabindex="0" style="position: relative;"><div class="leaflet-map-pane" style="transform: translate3d(0px, -29px, 0px);"><div class="leaflet-tile-pane"><div class="leaflet-layer"><div class="leaflet-tile-container leaflet-zoom-animated" style=""></div><div class="leaflet-tile-container leaflet-zoom-animated" style=""><img class="leaflet-tile leaflet-tile-loaded" src="./3269.png" style="height: 256px; width: 256px; left: 551px; top: 65px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3270.png" style="height: 256px; width: 256px; left: 551px; top: 321px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3269(1).png" style="height: 256px; width: 256px; left: 295px; top: 65px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3269(2).png" style="height: 256px; width: 256px; left: 807px; top: 65px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3270(1).png" style="height: 256px; width: 256px; left: 295px; top: 321px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3270(2).png" style="height: 256px; width: 256px; left: 807px; top: 321px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3268.png" style="height: 256px; width: 256px; left: 551px; top: -191px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3271.png" style="height: 256px; width: 256px; left: 551px; top: 577px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3268(1).png" style="height: 256px; width: 256px; left: 295px; top: -191px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3268(2).png" style="height: 256px; width: 256px; left: 807px; top: -191px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3271(1).png" style="height: 256px; width: 256px; left: 295px; top: 577px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3271(2).png" style="height: 256px; width: 256px; left: 807px; top: 577px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3269(3).png" style="height: 256px; width: 256px; left: 39px; top: 65px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3269(4).png" style="height: 256px; width: 256px; left: 1063px; top: 65px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3270(3).png" style="height: 256px; width: 256px; left: 39px; top: 321px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3270(4).png" style="height: 256px; width: 256px; left: 1063px; top: 321px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3268(3).png" style="height: 256px; width: 256px; left: 39px; top: -191px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3268(4).png" style="height: 256px; width: 256px; left: 1063px; top: -191px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3271(3).png" style="height: 256px; width: 256px; left: 39px; top: 577px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3271(4).png" style="height: 256px; width: 256px; left: 1063px; top: 577px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3269(5).png" style="height: 256px; width: 256px; left: -217px; top: 65px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3269(6).png" style="height: 256px; width: 256px; left: 1319px; top: 65px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3270(5).png" style="height: 256px; width: 256px; left: -217px; top: 321px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3270(6).png" style="height: 256px; width: 256px; left: 1319px; top: 321px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3268(5).png" style="height: 256px; width: 256px; left: -217px; top: -191px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3268(6).png" style="height: 256px; width: 256px; left: 1319px; top: -191px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3271(5).png" style="height: 256px; width: 256px; left: -217px; top: 577px;"><img class="leaflet-tile leaflet-tile-loaded" src="./3271(6).png" style="height: 256px; width: 256px; left: 1319px; top: 577px;"></div></div></div><div class="leaflet-objects-pane"><div class="leaflet-shadow-pane"></div><div class="leaflet-overlay-pane"><svg class="leaflet-zoom-animated" width="2000" height="878" viewBox="-317 -110 2000 878" style="transform: translate3d(-317px, -110px, 0px);"></svg></div><div class="leaflet-marker-pane"><div class="leaflet-marker-icon leaflet-marker-photo leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(367px, 185px, 0px); z-index: 185; opacity: 1;"><div style="background-image: url(http://41.media.tumblr.com/tumblr_lu4gtf1ez31qex1i7o1_75sq.jpg);"></div>​</div><div class="leaflet-marker-icon leaflet-marker-photo leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; opacity: 1; transform: translate3d(745px, 293px, 0px); z-index: 293;"><div style="background-image: url(http://40.media.tumblr.com/b4ff9e91abd2ba2d8242da9536aa412c/tumblr_n5c729VoJi1tq6tdto1_75sq.jpg);"></div>​</div><div class="leaflet-marker-icon leaflet-marker-photo leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; opacity: 1; transform: translate3d(811px, 412px, 0px); z-index: 412;"><div style="background-image: url(http://41.media.tumblr.com/8f7f0543d4f53f114fa866b57465380a/tumblr_n294lvcY9H1tq6tdto1_75sq.jpg);"></div>​</div><div class="leaflet-marker-icon leaflet-marker-photo leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(197px, 456px, 0px); z-index: 456; opacity: 1;"><div style="background-image: url(http://41.media.tumblr.com/58a45a711a9b39015fdb0601585e1b44/tumblr_n2m1viKp6v1tq6tdto1_75sq.jpg);"></div>​<b>3</b></div><div class="leaflet-marker-icon leaflet-marker-photo leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; opacity: 1; transform: translate3d(442px, 587px, 0px); z-index: 587;"><div style="background-image: url(http://36.media.tumblr.com/1db33e935ff486d74cbe35706fc9855a/tumblr_n2m0o6gcvY1tq6tdto1_75sq.jpg);"></div>​</div><div class="leaflet-marker-icon leaflet-marker-photo leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; opacity: 1; transform: translate3d(574px, 499px, 0px); z-index: 499;"><div style="background-image: url(http://41.media.tumblr.com/634b3ebae1233626c427dbfc44b3261a/tumblr_n1m6xg3ik81tq6tdto1_75sq.jpg);"></div>​</div><div class="leaflet-marker-icon leaflet-marker-photo leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; opacity: 1; transform: translate3d(555px, 627px, 0px); z-index: 627;"><div style="background-image: url(http://40.media.tumblr.com/8dd3cc5931650a6a772db77f6fad797b/tumblr_n5c7uw79Yn1tq6tdto1_75sq.jpg);"></div>​</div><div class="leaflet-marker-icon leaflet-marker-photo leaflet-zoom-animated leaflet-clickable" tabindex="0" style="margin-left: -20px; margin-top: -20px; width: 40px; height: 40px; transform: translate3d(699px, 543px, 0px); z-index: 543; opacity: 1;"><div style="background-image: url(http://40.media.tumblr.com/e46918901ad4cc6547ea27233873e879/tumblr_n3q2pdzLXM1tq6tdto1_75sq.jpg);"></div>​<b>2</b></div></div><div class="leaflet-popup-pane"></div></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="http://fiddle.jshell.net/nathansnider/q8ar6wu9/show/light/#" title="Zoom in">+</a><a class="leaflet-control-zoom-out" href="http://fiddle.jshell.net/nathansnider/q8ar6wu9/show/light/#" title="Zoom out">-</a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="http://leafletjs.com/" title="A JS library for interactive maps">Leaflet</a> | © <a href="http://openstreetmap.org/">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a> | © <a href="http://cartodb.com/attributions">CartoDB</a></div></div></div></div>
+
+
+    <script type="text/javascript">//<![CDATA[
+
+
+// set center coordinates
+var coords = [-15.198192275388006, -69.76354315486518];
+// set default zoom level
+var zoomLevel = 16;
+// initialize map
+var map = L.map('map').setView(coords, zoomLevel);
+// set source for map tiles
+ATTR = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+  '<a href="http://creativecommons.org/licenses/by-sa/2.0/">Ecoagraria</a> | ' +
+  '&copy; <a href="http://cartodb.com/attributions">Ecoagraria</a>';
+CDB_URL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+// add tiles to map
+L.tileLayer(CDB_URL, {
+  attribution: ATTR
+}).addTo(map);
+
+var photos = [{
+  "lat": -15.198651895657742,
+  "lng": -69.76584479792744,
+  "name": "Agencia Agraria Huancane",
+  "url": "img/dra1.png",
+  "thumbnail": "img/dra.png"
+}, {
+  "lat": -15.202677909348798,
+  "lng": -69.76888782046277,
+  "name": "Ecoagraria",
+  "url": "http://41.media.tumblr.com/83454d0e9cddfa5e9dcf2911ad9f803c/tumblr_n3q2xjrmvk1tq6tdto1_400.jpg",
+  "thumbnail": "img/eco.png"
+}, {
+  "lat": -15.20222385001854,
+  "lng": -69.76117386206643,
+  "name": "Buxton & Rosa, 1930",
+  "url": "http://36.media.tumblr.com/e46918901ad4cc6547ea27233873e879/tumblr_n3q2pdzLXM1tq6tdto1_400.jpg",
+  "thumbnail": "img/eco.png"
+}, {
+  "lat": 34.06370117,
+  "lng": -118.2967767,
+  "name": "A. M. Concrete Inc., 1990",
+  "url": "http://41.media.tumblr.com/634b3ebae1233626c427dbfc44b3261a/tumblr_n1m6xg3ik81tq6tdto1_400.jpg",
+  "thumbnail": "http://41.media.tumblr.com/634b3ebae1233626c427dbfc44b3261a/tumblr_n1m6xg3ik81tq6tdto1_75sq.jpg"
+}, {
+  "lat": 34.05123715,
+  "lng": -118.3195567,
+  "name": "Atkinson–Spicer Co., 1926",
+  "url": "http://40.media.tumblr.com/1db33e935ff486d74cbe35706fc9855a/tumblr_n2m0o6gcvY1tq6tdto1_400.jpg",
+  "thumbnail": "http://36.media.tumblr.com/1db33e935ff486d74cbe35706fc9855a/tumblr_n2m0o6gcvY1tq6tdto1_75sq.jpg"
+}, {
+  "lat": 34.0696981,
+  "lng": -118.3614635,
+  "name": "Lew. Odell, 1937",
+  "url": "http://36.media.tumblr.com/6737d1a172353dcd80bebe5b56d96150/tumblr_n2m20mOESy1tq6tdto1_400.jpg",
+  "thumbnail": "http://41.media.tumblr.com/6737d1a172353dcd80bebe5b56d96150/tumblr_n2m20mOESy1tq6tdto1_75sq.jpg"
+}, {
+  "lat": 34.0707379,
+  "lng": -118.3615279,
+  "name": "Frank J. Heilmann, 1937",
+  "url": "http://36.media.tumblr.com/1b5550f571e508a7a9ddc057ad07096c/tumblr_n2m24ceaF91tq6tdto1_400.jpg",
+  "thumbnail": "http://40.media.tumblr.com/1b5550f571e508a7a9ddc057ad07096c/tumblr_n2m24ceaF91tq6tdto1_75sq.jpg"
+}, {
+  "lat": 34.06903154,
+  "lng": -118.361485,
+  "name": "Tryon & Brain, 1925",
+  "url": "http://41.media.tumblr.com/58a45a711a9b39015fdb0601585e1b44/tumblr_n2m1viKp6v1tq6tdto1_400.jpg",
+  "thumbnail": "http://41.media.tumblr.com/58a45a711a9b39015fdb0601585e1b44/tumblr_n2m1viKp6v1tq6tdto1_75sq.jpg"
+}, {
+  "lat": 34.07611449,
+  "lng": -118.2561439,
+  "name": "So. Calif. Gas Co., 1987",
+  "url": "http://40.media.tumblr.com/8f7f0543d4f53f114fa866b57465380a/tumblr_n294lvcY9H1tq6tdto1_400.jpg",
+  "thumbnail": "http://41.media.tumblr.com/8f7f0543d4f53f114fa866b57465380a/tumblr_n294lvcY9H1tq6tdto1_75sq.jpg"
+}, {
+  "lat": 34.09311068,
+  "lng": -118.2675621,
+  "name": "James Martin, 1925",
+  "url": "http://40.media.tumblr.com/b4ff9e91abd2ba2d8242da9536aa412c/tumblr_n5c729VoJi1tq6tdto1_400.jpg",
+  "thumbnail": "http://40.media.tumblr.com/b4ff9e91abd2ba2d8242da9536aa412c/tumblr_n5c729VoJi1tq6tdto1_75sq.jpg"
+}, {
+  "lat": 34.10834904,
+  "lng": -118.3322972,
+  "name": "Geo. A. Shepard, 1926",
+  "url": "http://40.media.tumblr.com/tumblr_lu4gtf1ez31qex1i7o1_400.jpg",
+  "thumbnail": "http://41.media.tumblr.com/tumblr_lu4gtf1ez31qex1i7o1_75sq.jpg"
+}];
+
+var photoLayer = L.photo.cluster().on('click', function(evt) {
+  var photo = evt.layer.photo;
+  var template = '<img src="{url}" /></a><p>{name}</p>';
+  evt.layer.bindPopup(L.Util.template(template, photo), {
+    minWidth: 400
+  }).openPopup();
+});
+
+photoLayer.add(photos).addTo(map);
+
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "q8ar6wu9"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+
+
+
+
+</body></html>
